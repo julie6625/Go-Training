@@ -1,7 +1,29 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println("hello")
+	var a = 50
+
+	if a > 40 && a < 49 {
+		println("right")
+	} else {
+		println("wrong")
+	}
+
+	if a > 40 || a < 49 {
+		println("right")
+	} else {
+		println("wrong")
+	}
+
+	if !(a > 40 && a < 49) {
+		println("right")
+	} else {
+		println("wrong")
+	}
+
+	if !(a > 40 || a < 49) {
+		println("right")
+	} else {
+		println("wrong")
+	}
 }
