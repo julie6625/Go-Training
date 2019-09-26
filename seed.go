@@ -1,7 +1,17 @@
 package main
 
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
-func seed(seed int64) {
-	println(rand.Intn(10))
+func main() {
+	s := rand.NewSource(time.Now().UnixNano())
+
+	r := rand.New(s)
+
+	n := r.Intn(10) + 1
+
+	fmt.Println(n)
 }
