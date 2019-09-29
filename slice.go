@@ -1,19 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	slice1 := [][]float64{
-		[]float64{1, 2, 3},
-		[]float64{4, 5, 6},
-	}
+	slice1 := []int{0, 1, 2, 3, 4, 5}
 
-	for i := 0; i < 2; i++ {
-		for e := 0; e < 3; e++ {
-			fmt.Println(slice1[i][e])
-		}
+	slice1 = append(slice1[0:2], slice1[3:6]...)
+
+	for _, e := range slice1 {
+		fmt.Print(e, " ")
 	}
 	//if !(slice1[] == "bard"){
 	//	log.Fatal("wrong value")
